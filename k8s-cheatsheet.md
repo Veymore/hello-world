@@ -7,22 +7,33 @@ Best Practices:
 
 Commands:
 
-Create              - kubectl create deployment [name]
-Edit                - kubectl edit deployment [name]
-Delete              - kubectl delete deployment [name]
+- Create
+  - kubectl create deployment [name]
+- Edit
+  - kubectl edit deployment [name]
+- Delete
+  - kubectl delete deployment [name]
 
 Status:
 
-kubectl get nodes | pod | services | replicaset | deployment
+- kubectl get nodes | pod | services | replicaset | deployment
 
 Debugging:
 
-Logging             - kubectl logs [pod name]
-Pod-Terminal        - kubectl exec -it [pod name] -- bin/bash
+- Logging
+  - kubectl logs [pod name]
+- Pod-Terminal
+  - kubectl exec -it [pod name] -- bin/bash
 
 Implementation of configuration files:
-Create/Edit         - kubectl apply -f [file name]
-Delete              - kubectl delete -f [file name]
+- Create/Edit
+  - kubectl apply -f [file name]
+- Delete
+  - kubectl delete -f [file name]
+
+*on yaml-files:
+- strict indentation
+- yaml validator to check for indentation
 
 Structure of configuration files:
 - configuration files are split into 3 subparts:
