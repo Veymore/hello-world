@@ -42,6 +42,16 @@ Structure of configuration files:
   - status*         - contains the current status
   *information about the current status are delivered by etcd process on the master nodes
   
+  Services:
+  - in order to create a service for an underlying pod there has to be a matching label
+    - the label binds pod and service together
+    - the advantage of using a label for different deployments/pods under a service is that you can have different
+      differen deployments under one service
+  
+  Deployments:
+  - in order to deploy a new pod into an existing deployment this need to be done:
+    - edit the existing configuration and use k8s selfhealing feature by comparing etcd value
+  
  Basic structure of a cluster:
  ![components-of-kubernetes](https://user-images.githubusercontent.com/95536830/144724254-026ca6cd-9aa2-4eb2-9591-1ef65af6f054.png)
  Source and further reference: https://v1-18.docs.kubernetes.io/docs/concepts/overview/components/
