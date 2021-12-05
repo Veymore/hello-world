@@ -1,0 +1,21 @@
+apiVersion: 
+ - Refering to this cheatsheet: 
+ - https://matthewpalmer.net/kubernetes-app-developer/articles/kubernetes-apiversion-definition-guide.html
+ 
+kind:
+ - what type of entity is built eg. deployment or service
+ 
+metadata:
+ - name
+ - label
+   - app
+   
+spec:
+ - replicas -> how many should be present of the configurated entity?
+ - selector
+   - matchLabels -> which label needs to match in order for it to be recognized as matching entity?
+
+
+   
+
+  
