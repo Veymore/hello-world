@@ -1,0 +1,15 @@
+# server_rootCA.csr.cnf
+[req]
+default_bits = 2048
+prompt = no
+default_md = sha256
+distinguished_name = dn
+
+[dn]
+C=DE
+ST=BKS
+L=BKS
+O=Burstraße
+OU=local_RootCA
+emailAddress=julian@helloworld.com
+CN = helloworld.com
