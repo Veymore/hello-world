@@ -42,15 +42,15 @@ solution:
 - Minimum working build:
   - Deciding for a tech-stack:
     - Webserver: nginx
-    - Image: official image from docker hub
-    - HTML commit: manual insertion via ssh
-    - Exposing: via loadbalancer
+    - Image: example image from google
+    - HTML commit: already baked into image
+    - Exposing: via nodePort
   - points fulfilled:
     - container is deployed
     - accessible from the browser of the challenge-takers machine
   - points open:
     - is not preparing for the next task
-    - will need to swap loadbalancer for ingress
+    - will need to additionally implement ingress
 
 Exercise 3 - High-availability & elasticity
 The container should be deployed with multiple instances and traffic to the instances should be distributed 
@@ -60,9 +60,8 @@ Bonus: The instances of the container are auto-scaling based on CPU-load.
 solution:
 - Minimum working build:
   - Deciding for a tech-stack:
-    - LoadBalancing: kubeproxy (or hba) -> needs further research on round robin capabilities 
-      and if hba can do both and kubeproxy can be ignored?
-    - auto-scaling: hba
+    - LoadBalancing: hpa 
+    - auto-scaling: hpa
   - points fulfilled:
     - traffic is distributed evenly
     - scaling will be based on cpu-load
